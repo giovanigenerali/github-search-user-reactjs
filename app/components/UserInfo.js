@@ -8,8 +8,8 @@ function UserInfo(props) {
   if (props.user && props.repos) {
     var created_at = (new Date(props.user.data.created_at)).toString();
     userInfo = (
-      <div className="row">
-        <div className="col-5">
+      <div className="row justify-content-start">
+        <div className="col-3">
           <div className="card">
             <img className="card-img-top" src={props.user.data.avatar_url} alt="avatar" />
             <div className="card-body">

@@ -26,8 +26,8 @@ var SearchUser = createReactClass({
               <div className="col">
                 <form onSubmit={this.handleSubmit} className="justify-content-center">
                   <div className="form-group">
-                    <label>Username</label>
-                    <input type="text" ref="username" className="form-control" placeholder="Ex: wgenial" />
+                    <label htmlFor="username">Username</label>
+                    <input type="text" id="username" ref="username" className="form-control" placeholder="Ex: wgenial" />
                   </div>
                   <button type="submit" className="btn btn-primary">Buscar</button>
                 </form>

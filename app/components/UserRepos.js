@@ -14,15 +14,12 @@ var UserRepos = createReactClass({
       repos: props.repos.data
     });
   },
-  componentDidMount: function() {
-    console.log(this);
-  },
   render: function() {
     if (this.state.repos.length > 0) {
       var repos = this.state.repos.map(function(repo, key) {
         return (
-          <div key={key} className="list-group-item">
-            <a href="{repo.html_url}">{repo.full_name}</a>
+          <div key={key} className="list-group-item list-group-item-action">
+            <a href={repo.html_url} target="_blank">{repo.full_name}</a>
             <br />
             <small className="text-muted">{repo.description}</small>
           </div>
@@ -31,9 +28,16 @@ var UserRepos = createReactClass({
     }
 
     return (
-      <div className="col-7">
-        <div className="list-group">
-          {repos}
+      <div className="col-9">
+        <div className="card">
+          <div className="card-header">
+          Repositories <span className="badge badge-secondary">{this.state.reposCount}</span>
+          </div>
+          <div className="card-body">
+            <div className="list-group">
+              {repos}
+            </div>
+          </div>
         </div>
       </div>
     )
