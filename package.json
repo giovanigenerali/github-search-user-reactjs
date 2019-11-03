@@ -10,7 +10,7 @@
   "author": "Giovani Generali",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "create-react-class": "^15.6.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
